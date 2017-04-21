@@ -1,0 +1,1127 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jsreport/jsreport"
+
+    >jsreport (v1.7.0)</a>
+</h1>
+<h4>javascript based business reporting</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsreport">module jsreport</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.jsreport">
+            function <span class="apidocSignatureSpan"></span>jsreport
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter">
+            function <span class="apidocSignatureSpan">jsreport.</span>Reporter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.core">
+            function <span class="apidocSignatureSpan">jsreport.</span>core
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.extendDefaults">
+            function <span class="apidocSignatureSpan">jsreport.</span>extendDefaults
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.render">
+            function <span class="apidocSignatureSpan">jsreport.</span>render
+            <span class="apidocSignatureSpan">(req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsreport.</span>Reporter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsreport.</span>renderDefaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsreport.Reporter">module jsreport.Reporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.Reporter">
+            function <span class="apidocSignatureSpan">jsreport.</span>Reporter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.super_">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsreport.Reporter.prototype">module jsreport.Reporter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype._configureWinstonTransports">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_configureWinstonTransports
+            <span class="apidocSignatureSpan">(_transports)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype._initOptions">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_initOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype._initWinston">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_initWinston
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype._loadConfig">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_loadConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype._promisifyBlobStorage">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_promisifyBlobStorage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype._startReaper">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_startReaper
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype.afterConfigLoaded">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>afterConfigLoaded
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype.createListenerCollection">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>createListenerCollection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype.discover">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>discover
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype.init">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype.render">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>render
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.Reporter.prototype.use">
+            function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>use
+            <span class="apidocSignatureSpan">(extension)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsreport.core">module jsreport.core</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.core.core">
+            function <span class="apidocSignatureSpan">jsreport.</span>core
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsreport.core.Reporter">
+            function <span class="apidocSignatureSpan">jsreport.core.</span>Reporter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsreport" id="apidoc.module.jsreport">module jsreport</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.jsreport" id="apidoc.element.jsreport.jsreport">
+        function <span class="apidocSignatureSpan"></span>jsreport
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jsreport = function (options) {
+  options = options || {}
+  options.parentModuleDirectory = path.dirname(module.parent.filename)
+  return main(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter" id="apidoc.element.jsreport.Reporter">
+        function <span class="apidocSignatureSpan">jsreport.</span>Reporter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(options) {
+  this.options = options || {}
+  Reporter.instance = this
+  events.EventEmitter.call(this)
+
+  // since `reporter` instance will be used for other extensions,
+  // it will quickly reach the limit of `10` listeners,
+  // we increase the limit to Infinity for now,
+  // later we should probably design
+  // a way to detect possible memory leaks from extensions
+  this.setMaxListeners(Infinity)
+
+  this.initializeListeners = new ListenerCollection()
+  this.beforeRenderListeners = new ListenerCollection()
+  this.afterRenderListeners = new ListenerCollection()
+  this.renderErrorListeners = new ListenerCollection()
+  this.afterTemplatingEnginesExecutedListeners = new ListenerCollection()
+  this.validateRenderListeners = new ListenerCollection()
+  this.version = require(&#x27;../package.json&#x27;).version
+  this.settings = new Settings()
+  this.extensionsManager = new ExtensionsManager(this)
+  this._initWinston()
+  this._fnAfterConfigLoaded = function () {
+  }
+
+  var self = this
+  Object.defineProperty(this, &#x27;initializeListener&#x27;, {
+    get: function () {
+      if (self.logger) {
+        self.logger.warn(&#x27;initializeListener is deprecated, use initializeListeners instead&#x27;)
+      }
+
+      return self.initializeListeners
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.core" id="apidoc.element.jsreport.core">
+        function <span class="apidocSignatureSpan">jsreport.</span>core
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">core = function (options) {
+  options = options || {}
+
+  options.parentModuleDirectory = options.parentModuleDirectory || path.dirname(module.parent.filename)
+
+  return new Reporter(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.extendDefaults" id="apidoc.element.jsreport.extendDefaults">
+        function <span class="apidocSignatureSpan">jsreport.</span>extendDefaults
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extendDefaults(config) {
+  return extend(true, renderDefaults, config)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.render" id="apidoc.element.jsreport.render">
+        function <span class="apidocSignatureSpan">jsreport.</span>render
+        <span class="apidocSignatureSpan">(req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(req) {
+  if (_.isString(req)) {
+    req = {
+      template: {content: req, engine: &#x27;handlebars&#x27;, recipe: &#x27;phantom-pdf&#x27;}
+    }
+  }
+
+  if (!core.Reporter.instance) {
+    ensureTempFolder()
+    renderDefaults.parentModuleDirectory = renderDefaults.parentModuleDirectory || path.dirname(module.parent.filename)
+
+    return main(renderDefaults).init().then(function () {
+      return core.Reporter.instance.render(req)
+    })
+  }
+
+  return core.Reporter.instance.render(req)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  if (!core.Reporter.instance) {
+    ensureTempFolder()
+    renderDefaults.parentModuleDirectory = renderDefaults.parentModuleDirectory || path.dirname(module.parent.filename)
+
+    return main(renderDefaults).init().then(function () {
+      return core.Reporter.instance.<span class="apidocCodeKeywordSpan">render</span>(req)
+    })
+  }
+
+  return core.Reporter.instance.render(req)
+}
+
+function extendDefaults (config) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsreport.Reporter" id="apidoc.module.jsreport.Reporter">module jsreport.Reporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.Reporter" id="apidoc.element.jsreport.Reporter.Reporter">
+        function <span class="apidocSignatureSpan">jsreport.</span>Reporter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(options) {
+  this.options = options || {}
+  Reporter.instance = this
+  events.EventEmitter.call(this)
+
+  // since `reporter` instance will be used for other extensions,
+  // it will quickly reach the limit of `10` listeners,
+  // we increase the limit to Infinity for now,
+  // later we should probably design
+  // a way to detect possible memory leaks from extensions
+  this.setMaxListeners(Infinity)
+
+  this.initializeListeners = new ListenerCollection()
+  this.beforeRenderListeners = new ListenerCollection()
+  this.afterRenderListeners = new ListenerCollection()
+  this.renderErrorListeners = new ListenerCollection()
+  this.afterTemplatingEnginesExecutedListeners = new ListenerCollection()
+  this.validateRenderListeners = new ListenerCollection()
+  this.version = require(&#x27;../package.json&#x27;).version
+  this.settings = new Settings()
+  this.extensionsManager = new ExtensionsManager(this)
+  this._initWinston()
+  this._fnAfterConfigLoaded = function () {
+  }
+
+  var self = this
+  Object.defineProperty(this, &#x27;initializeListener&#x27;, {
+    get: function () {
+      if (self.logger) {
+        self.logger.warn(&#x27;initializeListener is deprecated, use initializeListeners instead&#x27;)
+      }
+
+      return self.initializeListeners
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.super_" id="apidoc.element.jsreport.Reporter.super_">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsreport.Reporter.prototype" id="apidoc.module.jsreport.Reporter.prototype">module jsreport.Reporter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype._configureWinstonTransports" id="apidoc.element.jsreport.Reporter.prototype._configureWinstonTransports">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_configureWinstonTransports
+        <span class="apidocSignatureSpan">(_transports)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_configureWinstonTransports = function (_transports) {
+  var self = this
+  var transports = _transports || {}
+
+  var knownTransports = {
+    debug: DebugTransport,
+    memory: winston.transports.Memory,
+    console: winston.transports.Console,
+    file: winston.transports.File,
+    http: winston.transports.Http
+  }
+
+  var knownOptions = [&#x27;transport&#x27;, &#x27;module&#x27;, &#x27;enabled&#x27;]
+
+  Object.keys(transports).forEach(function (transpName) {
+    var logger = self.logger
+    var transpOptions = transports[transpName]
+    var transportModule
+
+    if (!transpOptions || typeof transpOptions !== &#x27;object&#x27; || Array.isArray(transpOptions)) {
+      return
+    }
+
+    if (typeof transpOptions.transport !== &#x27;string&#x27; || transpOptions.transport === &#x27;&#x27;) {
+      throw new Error(
+        &#x27;invalid option for transport object &#x22;&#x27; + transpName +
+        &#x27;&#x22;, option &#x22;transport&#x22; is not specified or has an incorrect value, must be a string with a valid value. check your &#x22;logger
+&#x22; config&#x27;
+      )
+    }
+
+    if (typeof transpOptions.level !== &#x27;string&#x27; || transpOptions.level === &#x27;&#x27;) {
+      throw new Error(
+        &#x27;invalid option for transport object &#x22;&#x27; + transpName +
+        &#x27;&#x22;, option &#x22;level&#x22; is not specified or has an incorrect value, must be a string with a valid value. check your &#x22;logger&#x22;
+config&#x27;
+      )
+    }
+
+    if (transpOptions.enabled === false) {
+      return
+    }
+
+    if (knownTransports[transpOptions.transport]) {
+      logger.add(knownTransports[transpOptions.transport], _.extend(_.omit(transpOptions, knownOptions), {
+        name: transpName
+      }))
+    } else {
+      if (transpOptions.module == null) {
+        throw new Error(
+          &#x27;invalid option for transport object &#x22;&#x27; + transpName +
+          &#x27;&#x22;, option &#x22;transport&#x22; has an unknown transport type: &#x22;&#x27; + transpOptions.transport + &#x27;&#x22;. check your &#x22;logger&#x22; config&#x27;
+        )
+      }
+
+      if (typeof transpOptions.module !== &#x27;string&#x27;) {
+        throw new Error(
+          &#x27;invalid option for transport object &#x22;&#x27; + transpName +
+          &#x27;&#x22;, option &#x22;module&#x22; has an incorrect value, must be a string with a module name. check your &#x22;logger&#x22; config&#x27;
+        )
+      }
+
+      try {
+        transportModule = require(transpOptions.module)
+
+        if (typeof winston.transports[transpOptions.transport] === &#x27;function&#x27;) {
+          transportModule = winston.transports[transpOptions.transport]
+        } else if (transportModule &#x26;&#x26; typeof transportModule[transpOptions.transport] === &#x27;function&#x27;) {
+          transportModule = transportModule[transpOptions.transport]
+        }
+
+        if (typeof transportModule !== &#x27;function&#x27;) {
+          throw new Error(
+            &#x27;invalid option for transport object &#x22;&#x27; + transpName +
+            &#x27;&#x22;, module &#x22;&#x27; + transpOptions.module + &#x27;&#x22; does not export a valid transport. check your &#x22;logger&#x22; config&#x27;
+          )
+        }
+      } catch (e) {
+        if (e.code === &#x27;MODULE_NOT_FOUND&#x27;) {
+          throw new Error(
+            &#x27;invalid option for transport object &#x22;&#x27; + transpName +
+            &#x27;&#x22;, module &#x22;&#x27; + transpOptions.module +
+            &#x27;&#x22; in &#x22;module&#x22; option could not be found. are you sure that you have installed it?. check your &#x22;logger&#x22; config&#x27;
+          )
+        }
+
+        throw e
+      }
+
+      logger.add(transportModule, _.extend(_.omit(transpOptions, knownOptions), {
+        name: transpName
+      }))
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype._initOptions" id="apidoc.element.jsreport.Reporter.prototype._initOptions">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_initOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initOptions = function () {
+  var self = this
+
+  this.options.rootDirectory = this.options.rootDirectory || path.join(__dirname, &#x27;../../../&#x27;)
+  this.options.appDirectory = this.options.appDirectory || appRoot.toString()
+  this.options.parentModuleDirectory = this.options.parentModuleDirectory || path.dirname(module.parent.filename)
+
+  this.options.mode = process.env.NODE_ENV || &#x27;development&#x27;
+  this.options.logger = this.options.logger || {}
+
+  return Promise.resolve().then(function () {
+    if (self.options.loadConfig) {
+      return self._loadConfig()
+    }
+  }).then(function () {
+    return self._fnAfterConfigLoaded(self)
+  }).then(function () {
+    self.options.tenant = self.options.tenant || {name: &#x27;&#x27;}
+    self.options.dataDirectory = self.options.dataDirectory || path.join(self.options.rootDirectory, &#x27;data&#x27;)
+    self.options.tempDirectory = self.options.tempDirectory || path.join(os.tmpdir(), &#x27;jsreport-temp&#x27;)
+    self.options.connectionString = self.options.connectionString || {name: &#x27;memory&#x27;}
+    self.options.tasks = self.options.tasks || {}
+
+    self.options.tasks.strategy = self.options.tasks.strategy || DEFAULT_TASK_STRATEGY
+
+    self.options.tasks.tempDirectory = self.options.tempDirectory
+    self.options.tasks.nativeModules = self.options.tasks.nativeModules || []
+    self.options.tasks.modules = self.options.tasks.modules || []
+    self.options.tasks.allowedModules = self.options.tasks.allowedModules || []
+
+    self._configureWinstonTransports(self.options.logger)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype._initWinston" id="apidoc.element.jsreport.Reporter.prototype._initWinston">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_initWinston
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initWinston = function () {
+  if (!winston.loggers.has(&#x27;jsreport&#x27;)) {
+    var debugTransport = new DebugTransport()
+
+    winston.loggers.add(&#x27;jsreport&#x27;, {
+      transports: [debugTransport]
+    })
+
+    winston.loggers.get(&#x27;jsreport&#x27;).emitErrs = true
+
+    winston.loggers.get(&#x27;jsreport&#x27;).on(&#x27;error&#x27;, function (err) {
+      var dir
+      var msg
+
+      if (err.code === &#x27;ENOENT&#x27;) {
+        dir = path.dirname(err.path)
+
+        if (dir === &#x27;.&#x27;) {
+          msg = &#x27;Error from logger (winston) while trying to use a file to store logs:&#x27;
+        } else {
+          msg = &#x27;Error from logger (winston) while trying to use a file to store logs, if the directory &#x22;&#x27; + dir + &#x27;&#x22; does not exists
+ please create it:&#x27;
+        }
+
+        // make the error intentionally more visible to get the attention of the user
+        console.error(&#x27;------------------------&#x27;)
+        console.error(msg, err)
+        console.error(&#x27;------------------------&#x27;)
+      }
+    })
+  } else {
+    if (!winston.loggers.get(&#x27;jsreport&#x27;).transports.debug) {
+      winston.loggers.get(&#x27;jsreport&#x27;).add(DebugTransport)
+    }
+  }
+
+  this.logger = winston.loggers.get(&#x27;jsreport&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype._loadConfig" id="apidoc.element.jsreport.Reporter.prototype._loadConfig">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_loadConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadConfig = function () {
+  var self = this
+
+  function getConfigFile () {
+    if (self.options.mode === &#x27;production&#x27;) {
+      return &#x27;prod.config.json&#x27;
+    }
+
+    if (self.options.mode === &#x27;test&#x27;) {
+      return &#x27;test.config.json&#x27;
+    }
+
+    return &#x27;dev.config.json&#x27;
+  }
+
+  var nfn = nconf.argv().env({ separator: &#x27;:&#x27; }).env({ separator: &#x27;_&#x27; }).defaults(this.options)
+
+  this.options.configFile = getConfigFile()
+
+  if (fs.existsSync(path.join(this.options.rootDirectory, this.options.configFile))) {
+    nfn.file({file: path.join(this.options.rootDirectory, this.options.configFile)})
+  }
+
+  this.options = nconf.get()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype._promisifyBlobStorage" id="apidoc.element.jsreport.Reporter.prototype._promisifyBlobStorage">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_promisifyBlobStorage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_promisifyBlobStorage = function () {
+  var self = this
+
+  if (typeof this.blobStorage.write === &#x27;function&#x27; &#x26;&#x26; this.blobStorage.write.length === 3) {
+    var originalWrite = this.blobStorage.write
+
+    this.blobStorage.write = function (blobName, buffer, request, response) {
+      return new Promise(function (resolve, reject) {
+        return originalWrite.call(self.blobStorage, blobName, buffer, function (err, val) {
+          if (err) {
+            return reject(err)
+          }
+
+          return resolve(val)
+        })
+      })
+    }
+  }
+
+  if (typeof this.blobStorage.read === &#x27;function&#x27; &#x26;&#x26; this.blobStorage.read.length === 2) {
+    var originalRead = this.blobStorage.read
+
+    this.blobStorage.read = function (blobName, request, response) {
+      return new Promise(function (resolve, reject) {
+        return originalRead.call(self.blobStorage, blobName, function (err, val) {
+          if (err) {
+            return reject(err)
+          }
+
+          return resolve(val)
+        })
+      })
+    }
+  }
+
+  if (typeof this.blobStorage.remove === &#x27;function&#x27; &#x26;&#x26; this.blobStorage.remove.length === 2) {
+    var originalRemove = this.blobStorage.remove
+
+    this.blobStorage.remove = function (blobName, request, response) {
+      return new Promise(function (resolve, reject) {
+        return originalRemove.call(self.blobStorage, blobName, function (err, val) {
+          if (err) {
+            return reject(err)
+          }
+
+          return resolve(val)
+        })
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype._startReaper" id="apidoc.element.jsreport.Reporter.prototype._startReaper">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>_startReaper
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_startReaper = function () {
+  if (this.options.autoTempCleanup === false) {
+    return
+  }
+
+  // 3 minutes old files will be deleted
+  var reaper = new Reaper({threshold: 180000})
+  var self = this
+
+  if (!fs.existsSync(this.options.tempDirectory)) {
+    mkdirp.sync(this.options.tempDirectory)
+  }
+
+  reaper.watch(this.options.tempDirectory)
+
+  if (reaperGlobalInterval) {
+    clearInterval(reaperGlobalInterval)
+  }
+
+  reaper.start(function (err, files) {
+    if (err) {
+      self.logger.error(err)
+    }
+  })
+
+  setInterval(function () {
+    reaper.start(function (err, files) {
+      if (err) {
+        self.logger.error(err)
+      }
+    })
+  }, 30000 /* check every 30s for old files */).unref()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype.afterConfigLoaded" id="apidoc.element.jsreport.Reporter.prototype.afterConfigLoaded">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>afterConfigLoaded
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">afterConfigLoaded = function (fn) {
+  this._fnAfterConfigLoaded = fn
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  options = options || {}
+  options.discover = options.discover !== false
+  options.rootDirectory = options.rootDirectory == null ? path.join(__dirname, &#x27;../../../&#x27;) : options.rootDirectory
+  options.loadConfig = options.loadConfig == null ? true : options.loadConfig
+  var reporter = core(options)
+  reporter.version = packagejson.version
+
+  return reporter.<span class="apidocCodeKeywordSpan">afterConfigLoaded</span>(extendConfig)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype.createListenerCollection" id="apidoc.element.jsreport.Reporter.prototype.createListenerCollection">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>createListenerCollection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createListenerCollection = function () {
+  return new ListenerCollection()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype.discover" id="apidoc.element.jsreport.Reporter.prototype.discover">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>discover
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">discover = function () {
+  this.options.discover = true
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype.init" id="apidoc.element.jsreport.Reporter.prototype.init">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  var self = this
+
+  return this._initOptions().then(function () {
+    if (self.options.logger &#x26;&#x26; self.options.logger.silent === true) {
+      silentLogs(self.logger)
+    }
+
+    self.logger.info(&#x27;Initializing jsreport@&#x27; + self.version + &#x27; in &#x27; + self.options.mode + &#x27; mode&#x27; + ((self.options.loadConfig ? (&#x27;
+using configuration file &#x27; + self.options.configFile) : &#x27;&#x27;)))
+
+    if (self.options.tasks.strategy === DEFAULT_TASK_STRATEGY) {
+      self.logger.info(&#x27;Setting process based strategy for rendering. Please visit http://jsreport.net/learn/configuration for information
+ how to get more performance.&#x27;)
+    }
+
+    self.scriptManager = self.options.tasks.scriptManager || ScriptManager(self.options.tasks)
+    self.documentStore = new DocumentStore(extend({}, self.options, { logger: self.logger }))
+
+    self.settings.registerEntity(self.documentStore)
+
+    var ensureStarted = Promise.promisify(self.scriptManager.ensureStarted).bind(self.scriptManager)
+
+    return ensureStarted().then(function () {
+      if (!self.options.blobStorage || self.options.blobStorage === &#x27;inMemory&#x27;) {
+        self.blobStorage = new (require(&#x27;./blobStorage/inMemoryBlobStorage.js&#x27;))(self.options)
+      }
+      if (self.options.blobStorage === &#x27;fileSystem&#x27;) {
+        self.blobStorage = new (require(&#x27;./blobStorage/fileSystemBlobStorage.js&#x27;))(self.options)
+      }
+    }).then(function () {
+      return self.extensionsManager.init()
+    }).then(function () {
+      return self._startReaper()
+    }).then(function () {
+      return self.documentStore.init()
+    }).then(function () {
+      return self.settings.init(self.documentStore)
+    }).then(function () {
+      self._promisifyBlobStorage()
+      return self.initializeListeners.fire().then(function () {
+        self.extensionsManager.recipes.push({
+          name: &#x27;html&#x27;,
+          execute: htmlRecipe
+        })
+
+        self.extensionsManager.engines.push({
+          name: &#x27;none&#x27;,
+          pathToEngine: path.join(__dirname, &#x27;render&#x27;, &#x27;noneEngine.js&#x27;)
+        })
+
+        self.logger.info(&#x27;reporter initialized&#x27;)
+        self._initialized = true
+        return self
+      })
+    })
+  }).catch(function (e) {
+    self.logger.error(&#x27;Error occured during reporter init &#x27; + e.stack)
+    return Promise.reject(e)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  }
+
+  if (!core.Reporter.instance) {
+    ensureTempFolder()
+    renderDefaults.parentModuleDirectory = renderDefaults.parentModuleDirectory || path.dirname(module.parent.filename)
+
+    return main(renderDefaults).<span class="apidocCodeKeywordSpan">init</span>().then(function () {
+      return core.Reporter.instance.render(req)
+    })
+  }
+
+  return core.Reporter.instance.render(req)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype.render" id="apidoc.element.jsreport.Reporter.prototype.render">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>render
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (request) {
+  if (!this._initialized) {
+    throw new Error(&#x27;Not initialized, you need to call jsreport.init().then before rendering&#x27;)
+  }
+  return render(this, request)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  if (!core.Reporter.instance) {
+    ensureTempFolder()
+    renderDefaults.parentModuleDirectory = renderDefaults.parentModuleDirectory || path.dirname(module.parent.filename)
+
+    return main(renderDefaults).init().then(function () {
+      return core.Reporter.instance.<span class="apidocCodeKeywordSpan">render</span>(req)
+    })
+  }
+
+  return core.Reporter.instance.render(req)
+}
+
+function extendDefaults (config) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.Reporter.prototype.use" id="apidoc.element.jsreport.Reporter.prototype.use">
+        function <span class="apidocSignatureSpan">jsreport.Reporter.prototype.</span>use
+        <span class="apidocSignatureSpan">(extension)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function (extension) {
+  this.extensionsManager.use(extension)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsreport.core" id="apidoc.module.jsreport.core">module jsreport.core</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.core.core" id="apidoc.element.jsreport.core.core">
+        function <span class="apidocSignatureSpan">jsreport.</span>core
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">core = function (options) {
+  options = options || {}
+
+  options.parentModuleDirectory = options.parentModuleDirectory || path.dirname(module.parent.filename)
+
+  return new Reporter(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsreport.core.Reporter" id="apidoc.element.jsreport.core.Reporter">
+        function <span class="apidocSignatureSpan">jsreport.core.</span>Reporter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(options) {
+  this.options = options || {}
+  Reporter.instance = this
+  events.EventEmitter.call(this)
+
+  // since `reporter` instance will be used for other extensions,
+  // it will quickly reach the limit of `10` listeners,
+  // we increase the limit to Infinity for now,
+  // later we should probably design
+  // a way to detect possible memory leaks from extensions
+  this.setMaxListeners(Infinity)
+
+  this.initializeListeners = new ListenerCollection()
+  this.beforeRenderListeners = new ListenerCollection()
+  this.afterRenderListeners = new ListenerCollection()
+  this.renderErrorListeners = new ListenerCollection()
+  this.afterTemplatingEnginesExecutedListeners = new ListenerCollection()
+  this.validateRenderListeners = new ListenerCollection()
+  this.version = require(&#x27;../package.json&#x27;).version
+  this.settings = new Settings()
+  this.extensionsManager = new ExtensionsManager(this)
+  this._initWinston()
+  this._fnAfterConfigLoaded = function () {
+  }
+
+  var self = this
+  Object.defineProperty(this, &#x27;initializeListener&#x27;, {
+    get: function () {
+      if (self.logger) {
+        self.logger.warn(&#x27;initializeListener is deprecated, use initializeListeners instead&#x27;)
+      }
+
+      return self.initializeListeners
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
